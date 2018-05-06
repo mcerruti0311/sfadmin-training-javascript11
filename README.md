@@ -1,16 +1,21 @@
-Hour 11
-JavaScript and HTML5
-What You’ll Learn in This Hour:
+## Hour 11
 
-About the new HTML5 markup tags
-How to handle video and audio
-Using the <canvas> element
-Drag and drop in HTML5
-Working with local storage
-How to interface with the local file system
+> What You’ll Learn in This Hour:
+>
+> * About the new HTML5 markup tags
+> * How to handle video and audio
+> * Using the <canvas> element
+> * Drag and drop in HTML5
+> * Working with local storage
+> * How to interface with the local file system
+
+## JavaScript and HTML5
 The previous version of HTML, HTML 4.01, has been around since 1999.
 
-The XML-based version of HTML, XHTML, had been the subject of various recent W3C efforts, the latest having been moves toward XHTML2. In 2009 the W3C announced that XHTML2 was to be dumped in favor of diverting resources to a new version of HTML, HTML5.
+The XML-based version of HTML, XHTML, had been the subject
+ of various recent W3C efforts, the latest having been moves
+  toward XHTML2. In 2009 the W3C announced that XHTML2 was to be dumped in favor of diverting resources to a new version
+of HTML, HTML5.
 
 Tip
 
@@ -232,4 +237,3 @@ A. Sure, lots of them. Take a look at http://html5gallery.com/ for some examples
 Exercises
 Review some of the examples of previous hours, and try to rewrite them using some of the new HTML5 interfaces.
 HTML5 is pretty new at the time of writing. Check out the current state of browser support for the various aspects of HTML5 at http://caniuse.com/ or http://html5readiness.com/.
- 
