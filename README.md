@@ -1,26 +1,41 @@
 Hour 11
-JavaScript and HTML5
-What You’ll Learn in This Hour:
+# JavaScript and HTML5
+>  What You’ll Learn in This Hour:
+> * About the new HTML5 markup tags
+> * How to handle video and audio
+> * Using the `<canvas>` element
+> * Drag and drop in HTML5
+> * Working with local storage
+> * How to interface with the local file system
 
-About the new HTML5 markup tags
-How to handle video and audio
-Using the <canvas> element
-Drag and drop in HTML5
-Working with local storage
-How to interface with the local file system
-The previous version of HTML, HTML 4.01, has been around since 1999.
+The previous version of HTML, HTML 4.01, has been around
+since 1999.
 
-The XML-based version of HTML, XHTML, had been the subject of various recent W3C efforts, the latest having been moves toward XHTML2. In 2009 the W3C announced that XHTML2 was to be dumped in favor of diverting resources to a new version of HTML, HTML5.
+The XML-based version of HTML, XHTML, had been the subject
+of various recent W3C efforts, the latest having been moves
+toward XHTML2. In 2009 the W3C announced that XHTML2 was to
+be dumped in favor of diverting resources to a new version
+of HTML, HTML5.
+
+This latest incarnation of HTML concentrates on developing
+HTML as a front end for web applications, extending the
+markup language via semantically rich elements,
+introducing some new attributes, and adding the
+possibility to use brand-new APIs in conjunction with
+JavaScript.
+
+The HTML5 standard was finalized as the new standard for
+HTML in the fall of 2014, and the major browsers already
+support many of the new HTML5 elements and APIs.
+
+In this hour, you learn how to control some of these
+powerful new features with JavaScript.
 
 Tip
 
 Note how it’s written: HTML5. There’s no space between the L and the 5.
 
-This latest incarnation of HTML concentrates on developing HTML as a front end for web applications, extending the markup language via semantically rich elements, introducing some new attributes, and adding the possibility to use brand-new APIs in conjunction with JavaScript.
 
-The HTML5 standard was finalized as the new standard for HTML in the fall of 2014, and the major browsers already support many of the new HTML5 elements and APIs.
-
-In this hour, you learn how to control some of these powerful new features with JavaScript.
 
 New Markup for HTML5
 Even HTML pages that are well-formed are more difficult to read and interpret than they could be, because the markup contains very little semantic information.
@@ -232,4 +247,3 @@ A. Sure, lots of them. Take a look at http://html5gallery.com/ for some examples
 Exercises
 Review some of the examples of previous hours, and try to rewrite them using some of the new HTML5 interfaces.
 HTML5 is pretty new at the time of writing. Check out the current state of browser support for the various aspects of HTML5 at http://caniuse.com/ or http://html5readiness.com/.
- 
