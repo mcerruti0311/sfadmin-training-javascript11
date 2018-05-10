@@ -4,9 +4,6 @@ Hour 11
 > * About the new HTML5 markup tags
 > * How to handle video and audio
 > * Using the `<canvas>` element
-> * Drag and drop in HTML5
-> * Working with local storage
-> * How to interface with the local file system
 
 The previous version of HTML, HTML 4.01, has been around
 since 1999.
