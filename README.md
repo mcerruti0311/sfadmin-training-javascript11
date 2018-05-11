@@ -159,7 +159,8 @@ loop and autoplay:
 
 ### Tip
 
-> Don’t abuse loop and autoplay, or you may find that many of your site visitors don’t return!
+> Don’t abuse loop and autoplay, or you may find that many of your site visitors
+ don’t return!
 
 As with the earlier examples for video files, you can include alternative
 formats to help ensure that a user’s browser will find one that it can play, as
@@ -173,68 +174,145 @@ in the following code:
 </audio>
 
 ```
-MP3, WAV, and Ogg are typically supported file formats for the <audio> element. Controlling an audio file in JavaScript uses the same methods as for the <video> tag.
+MP3, WAV, and Ogg are typically supported file formats for the <audio> element.
+Controlling an audio file in JavaScript uses the same methods as for the
+`<video>` tag.
 
-To add and play an audio file via JavaScript, you can treat it just like any other JavaScript or DOM object:
+To add and play an audio file via JavaScript, you can treat it just like any
+other JavaScript or DOM object:
 
+```JavaScript
 var soundElement = document.createElement('audio');
 soundElement.setAttribute('src', 'sound.ogg');
 soundElement.play();
 soundElement.pause();
+```
 
-The <audio> and <video> tags have many useful properties that you can access via JavaScript. Here are a few useful ones, the meaning of which will be immediately apparent:
-
+The `<audio>` and `<video>` tags have many useful properties that you can access
+via JavaScript. Here are a few useful ones, the meaning of which will be
+immediately apparent:
+```JavaScript
 mediaElement.duration
 mediaElement.currentTime
 mediaElement.playbackRate
 mediaElement.muted
-
+```
 For example, to move to a point 45 seconds into a song you might use
 
-soundElement.currentTime = 45;
+`soundElement.currentTime = 45;`
 
-Tip
+### Tip
 
-You can find a comprehensive reference to these tags and their properties and methods at
+>You can find a comprehensive reference to these tags and their properties and
+methods at
 http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html.
 
-Drawing on the Page with <canvas>
-The new <canvas> tag gives you just that: a rectangular space in your page where you can draw shapes and graphics, as well as load and display image files and control their display via JavaScript. The many practical uses for the element include dynamic charts, JavaScript/HTML games, and instructional animations.
+#### Drawing on the Page with `<canvas>`
+The new `<canvas>` tag gives you just that: a rectangular space in your page
+where you can draw shapes and graphics, as well as load and display image files
+and control their display via JavaScript. The many practical uses for the
+element include dynamic charts, JavaScript/HTML games, and instructional
+animations.
 
-Using the <canvas> tag simply allows you to define a region by setting its width and height parameters; everything else related to creating the graphical content is done via JavaScript. There is an extensive set of drawing methods known as the Canvas 2D API.
+Using the `<canvas>` tag simply allows you to define a region by setting its
+width and height parameters; everything else related to creating the graphical
+content is done via JavaScript. There is an extensive set of drawing methods
+known as the Canvas 2D API.
 
-Drag and Drop
-Drag and drop is a part of the HTML5 standard. Just about any element can be made draggable.
+### Drag and Drop
+Drag and drop is a part of the HTML5 standard. Just about any element can be
+made draggable.
 
-To make an element draggable, all that’s required is to set its draggable attribute to true:
+To make an element draggable, all that’s required is to set its draggable
+attribute to true:
 
-<img draggable="true" />
+`<img draggable="true" />`
 
-Dragging something, though, isn’t much use by itself. To employ a draggable object to achieve something useful, you’re probably going to want to be able to drop it somewhere.
+Dragging something, though, isn’t much use by itself. To employ a draggable
+object to achieve something useful, you’re probably going to want to be able to
+drop it somewhere.
 
-To define where an object can be dropped, and control the dragging and dropping process, you need to write event listeners to detect and control the various parts of the drag-and-drop process.
+To define where an object can be dropped, and control the dragging and dropping
+process, you need to write event listeners to detect and control the various
+parts of the drag-and-drop process.
 
 There are a few different events you can utilize to control your drag and drop:
 
-dragstart
-drag
-dragenter
-dragleave
-dragover
-drop
-dragend
-Tip
+* `dragstart`
+* `drag`
+* `dragenter`
+* `dragleave`
+* `dragover`
+* `drop`
+* `dragend`
 
-Not all items can be drop targets—an <img>, for example, cannot accept drops.
+### Tip
 
-To control your drag and drop, you need to define a source element (where the drag starts), the data payload (what it is you’re dragging), and a drop target (an area to catch the dropped item).
+> Not all items can be drop targets—an `<img>`, for example, cannot accept drops.
 
-The dataTransfer property contains a piece of data sent in a drag action. The value of dataTransfer is usually set in the dragstart event and read/handled in the drop event.
+To control your drag and drop, you need to define a source element (where the
+drag starts), the data payload (what it is you’re dragging), and a drop target
+ (an area to catch the dropped item).
 
-Calling setData(format, data) or getData(format, data) will (respectively) set or read this piece of data.
+The `dataTransfer` property contains a piece of data sent in a drag action. The
+value of `dataTransfer` is usually set in the `dragstart` event and read/handled
+in the `drop` event.
 
-Local Storage
-HTML5 pages can store even large amounts of data within the user’s browser, without any negative effect on the website’s performance. Web storage is more secure and faster than doing this via cookies. Like when using cookies, the data is stored in key/value pairs, and a web page can only access the data it has itself stored.
+Calling `setData(format, data)` or `getData(format, data)` will (respectively)
+set or read this piece of data.
+
+To get the party started, you define a couple of HTML elements on your page.
+The `<div>` element with ID of `drop1` is the target area for catching the drop,
+and the image with ID of drag1 is to become your `draggable` item.
+
+Three important functions are defined in the code. Each of these functions is
+passed the current event to process. Behind the scenes, `ev.target` changes
+automatically for each type of event, depending on where you are in the
+drag-and-drop process:
+
+* A function named `drag(ev)` is executed when the drag starts. This function
+sets the value of the `dataTransfer` property for the drag to the ID of the
+dragged object:
+```JavaScript
+function drag(ev) {
+    ev.dataTransfer.setData("Text",ev.target.id);
+}
+```
+* Another function named `allowDrop(ev)` is executed when the drag passes over
+the intended drop area. All that this function must achieve is to prevent the
+drop area’s default behavior from taking place (as the default behavior prevents
+dropping):
+```JavaScript
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+```
+* Finally, a function named `drop(ev)` is executed when the dragged item is
+dropped. In this function, the value of the `dataTransfer` property is read to
+determine the ID of the dragged object; then that object is appended as a child
+object to the drop area object. Once again, the default operation needs to be
+prevented from taking place:
+```JavaScript
+function drop(ev) {
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+    ev.preventDefault();
+}
+```
+The loaded page should look something like the one shown in Figure 11.3;
+dragging the small image and dropping it over the white drop area, you should
+see it “dock” into the `<div>` element, as shown in the figure.
+
+![11fig03.jpg](11fig03.jpg)
+
+FIGURE 11.3 HTML5 drag and drop
+
+### Local Storage
+HTML5 pages can store even large amounts of data within the user’s browser,
+without any negative effect on the website’s performance. Web storage is more
+secure and faster than doing this via cookies. Like when using cookies, the data
+is stored in key/value pairs, and a web page can only access the data it has
+itself stored.
 
 The two new objects for storing data locally in the browser are
 
