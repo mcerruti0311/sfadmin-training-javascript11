@@ -1,6 +1,6 @@
-Hour 11
+# Hour 11
 # JavaScript and HTML5
->  What You’ll Learn in This Hour:
+>  ### What You’ll Learn in This Hour:
 > * About the new HTML5 markup tags
 > * How to handle video and audio
 > * Using the `<canvas>` element
@@ -28,59 +28,94 @@ support many of the new HTML5 elements and APIs.
 In this hour, you learn how to control some of these
 powerful new features with JavaScript.
 
-Tip
-
-Note how it’s written: HTML5. There’s no space between the L and the 5.
-
+### Tip
+> Note how it’s written: HTML5. There’s no space between the L and the 5.
 
 
-New Markup for HTML5
-Even HTML pages that are well-formed are more difficult to read and interpret than they could be, because the markup contains very little semantic information.
 
-Page sections such as sidebars, headers and footers, and navigation elements are all contained in general-purpose page elements such as divs, and only identifiable by the ID and class names invented by the page’s developer.
+### New Markup for HTML5
+Even HTML pages that are well-formed are more difficult to read
+and interpret than they could be, because the markup contains
+very little semantic information.
 
-HTML5 adds new elements to more easily identify each of these, and more, types of content. Some of the new tags are listed in Table 11.1.
+Page sections such as sidebars, headers and footers, and
+navigation elements are all contained in general-purpose page
+elements such as divs, and only identifiable by the ID and
+class names invented by the page’s developer.
 
-Image
+HTML5 adds new elements to more easily identify each of these,
+and more, types of content. Some of the new tags are listed in
+Table 11.1.
+
+![11tab01.jpg](11tab01.jpg)
 TABLE 11.1 Some New HTML5 Tags
 
-Some Important New Elements
-While HTML5 introduces a wide variety of interesting new capabilities, this section concentrates on the new tags that help ease some long-standing difficulties.
+### Some Important New Elements
+While HTML5 introduces a wide variety of interesting new
+capabilities, this section concentrates on the new tags that
+help ease some long-standing difficulties.
 
-Video Playback with <video>
-Video on the Web is extremely popular. However, the methods for implementing video are generally proprietary, reproduction happening via plug-ins such as Flash, Windows Media, and Apple QuickTime. Markup that works for embedding these elements in one browser doesn’t always work in the others.
+#### Video Playback with `<video>`
+Video on the Web is extremely popular. However, the methods for
+implementing video are generally proprietary, reproduction
+happening via plug-ins such as Flash, Windows Media, and Apple
+QuickTime. Markup that works for embedding these elements in
+one browser doesn’t always work in the others.
 
-HTML5 contains a new <video> element, the aim of which is to enable the embedding of any and all video formats.
+HTML5 contains a new `<video>` element, the aim of which is to
+enable the embedding of any and all video formats.
 
-Using the new <video> tag, you can implement your favorite QuickTime movie like this:
+Using the new `<video>` tag, you can implement your favorite
+QuickTime movie like this:
 
-<video src="video.mov" />
+`<video src="video.mov" />`
 
-So far there has been much debate about which video formats (codecs) should be supported by the video element; at the time of writing, the search continues for a codec that requires no special licensing terms, though WebM (http://www.webmproject.org/) is currently looking like the favorite. For the time being, quoting multiple sources gets around the problem and avoids the need for browser sniffing; there are currently three widely supported video formats—MP4, WebM, and Ogg.
+So far there has been much debate about which video formats
+(codecs) should be supported by the video element; at the time
+of writing, the search continues for a codec that requires no
+special licensing terms, though WebM
 
+(http://www.webmproject.org/) is currently looking like the
+favorite. For the time being, quoting multiple sources gets
+around the problem and avoids the need for browser
+sniffing; there are currently three widely supported video
+formats—MP4, WebM, and Ogg.
+
+```JavaScript
 <video id="vid1" width="400" height="300" controls="controls">
     <source src="movie.mp4" type="video/mp4" />
     <source src="movie.ogg" type="video/ogg" />
     <source src="movie.webm" type="video/webm" />
     <p>Video tag not supported.</p>
 </video>
+```
+It is also a good practice to include width and height attributes
+for the `<video>` element. If height and width are not set, the
+browser doesn’t know how much screen space to reserve,
+resulting in the page layout changing as the video loads.
 
-It is also a good practice to include width and height attributes for the <video> element. If height and width are not set, the browser doesn’t know how much screen space to reserve, resulting in the page layout changing as the video loads.
+You are also recommended to place some suitable text between the
+`<video>` and `</video>` tags to display in browsers that don’t
+support the `<video>` tag.
 
-You are also recommended to place some suitable text between the <video> and </video> tags to display in browsers that don’t support the <video> tag.
+Some important properties of the `<video>` tag are listed in
+Table 11.2.
 
-Some important properties of the <video> tag are listed in Table 11.2.
+![11fig02.jpg](11fig02.jpg)
+TABLE 11.2 Some Attributes of the `<video>` Element
 
-Image
-TABLE 11.2 Some Attributes of the <video> Element
+Note that the appearance of the controls added using the controls
+property will depend on the browser in use, as shown in Figure
+11.1.
 
-Note that the appearance of the controls added using the controls property will depend on the browser in use, as shown in Figure 11.1.
-
-Image
+![11fig01.jpg](11fig01.jpg)
 FIGURE 11.1 The appearance of controls varies between browsers
 
-You can access these properties in the same way as any other JavaScript or DOM object. For the previous video definition, you might use
+You can access these properties in the same way as any other
+JavaScript or DOM object. For the previous video definition, you
+might use
 
+```JavaScript
 var myVideo = document.getElementById("vid1").volume += 0.1;
 
 to marginally increase the volume, or
@@ -88,36 +123,48 @@ to marginally increase the volume, or
 if(document.getElementById("vid1").paused) {
     alert(message);
 }
-
-to pass a message to the user indicating that video playback is currently paused.
+```
+to pass a message to the user indicating that video playback is
+currently paused.
 
 Testing Format Support with canPlayType()
-You can check for support for a particular codec using the JavaScript method
+You can check for support for a particular codec using the
+JavaScript method
 
-media.canPlayType(type)
+`media.canPlayType(type)`
 
-In the preceding example, type is a string containing the media type, for example, “video/webm”. This method must return an empty string if the browser knows it cannot play the content. The method might also return “probably” if the browser is confident it can support the format, or “maybe” otherwise.
+In the preceding example, type is a string containing the media
+type, for example, “video/webm”. This method must return an empty string if
+the browser knows it cannot play the content. The method might also return
+“probably” if the browser is confident it can support the format, or “maybe”
+otherwise.
 
-Controlling Playback
-Playback can also be controlled programmatically using the pause() and play() commands, as in the following code snippet:
-
+#### Controlling Playback
+Playback can also be controlled programmatically using the pause() and play()
+commands, as in the following code snippet:
+```JavaScript
 var myVideo = document.getElementById("vid1").play();
 var myVideo = document.getElementById("vid1").pause();
+```
+#### Playing Sound with the <audio> Tag
+Pretty much everything stated previously about the <video> tag applies equally
+well to the <audio> tag. The simple way to use the <audio> tag is like this:
 
-Playing Sound with the <audio> Tag
-Pretty much everything stated previously about the <video> tag applies equally well to the <audio> tag. The simple way to use the <audio> tag is like this:
+`<audio src="song.mp3"></audio>`
 
-<audio src="song.mp3"></audio>
+You can add further attributes to achieve more control over playback, such as
+loop and autoplay:
 
-You can add further attributes to achieve more control over playback, such as loop and autoplay:
+`<audio src="song.mp3" autoplay loop></audio>`
 
-<audio src="song.mp3" autoplay loop></audio>
+### Tip
 
-Tip
+> Don’t abuse loop and autoplay, or you may find that many of your site visitors don’t return!
 
-Don’t abuse loop and autoplay, or you may find that many of your site visitors don’t return!
-
-As with the earlier examples for video files, you can include alternative formats to help ensure that a user’s browser will find one that it can play, as in the following code:
+As with the earlier examples for video files, you can include alternative
+formats to help ensure that a user’s browser will find one that it can play, as
+in the following code:
+```JavaScript
 
 <audio controls="controls">
     <source src="song.ogg" type="audio/ogg" />
@@ -125,6 +172,7 @@ As with the earlier examples for video files, you can include alternative format
     Your browser does not support the audio element.
 </audio>
 
+```
 MP3, WAV, and Ogg are typically supported file formats for the <audio> element. Controlling an audio file in JavaScript uses the same methods as for the <video> tag.
 
 To add and play an audio file via JavaScript, you can treat it just like any other JavaScript or DOM object:
