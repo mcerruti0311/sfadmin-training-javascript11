@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="hour-11">Hour 11</h1>
+<h1 id="javascript-and-html5">JavaScript and HTML5</h1>
+<blockquote>
+<h3 id="what-you-ll-learn-in-this-hour-">What You’ll Learn in This Hour:</h3>
+<ul>
+<li>About the new HTML5 markup tags</li>
+<li>How to handle video and audio</li>
+<li>Using the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;canvas&gt;</code> element</li>
+</ul>
+</blockquote>
+<p>The previous version of HTML, HTML 4.01, has been around
+since 1999.</p>
+<p>The XML-based version of HTML, XHTML, had been the subject
+of various recent W3C efforts, the latest having been moves
+toward XHTML2. In 2009 the W3C announced that XHTML2 was to
+be dumped in favor of diverting resources to a new version
+of HTML, HTML5.</p>
+<p>This latest incarnation of HTML concentrates on developing
+HTML as a front end for web applications, extending the
+markup language via semantically rich elements,
+introducing some new attributes, and adding the
+possibility to use brand-new APIs in conjunction with
+JavaScript.</p>
+<p>The HTML5 standard was finalized as the new standard for
+HTML in the fall of 2014, and the major browsers already
+support many of the new HTML5 elements and APIs.</p>
+<p>In this hour, you learn how to control some of these
+powerful new features with JavaScript.</p>
+<h3 id="tip">Tip</h3>
+<blockquote>
+<p>Note how it’s written: HTML5. There’s no space between the L and the 5.</p>
+</blockquote>
+<h3 id="new-markup-for-html5">New Markup for HTML5</h3>
+<p>Even HTML pages that are well-formed are more difficult to read
+and interpret than they could be, because the markup contains
+very little semantic information.</p>
+<p>Page sections such as sidebars, headers and footers, and
+navigation elements are all contained in general-purpose page
+elements such as divs, and only identifiable by the ID and
+class names invented by the page’s developer.</p>
+<p>HTML5 adds new elements to more easily identify each of these,
+and more, types of content. Some of the new tags are listed in
+Table 11.1.</p>
+<p><img alt="11tab01.jpg" src="C:\Users\mcerr\Documents\GitHub\sfadmin-training-javascript11\11tab01.jpg">
+TABLE 11.1 Some New HTML5 Tags</p>
+<h3 id="some-important-new-elements">Some Important New Elements</h3>
+<p>While HTML5 introduces a wide variety of interesting new
+capabilities, this section concentrates on the new tags that
+help ease some long-standing difficulties.</p>
+<h4 id="video-playback-with-video">Video Playback with <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code></h4>
+<p>Video on the Web is extremely popular. However, the methods for
+implementing video are generally proprietary, reproduction
+happening via plug-ins such as Flash, Windows Media, and Apple
+QuickTime. Markup that works for embedding these elements in
+one browser doesn’t always work in the others.</p>
+<p>HTML5 contains a new <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> element, the aim of which is to
+enable the embedding of any and all video formats.</p>
+<p>Using the new <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> tag, you can implement your favorite
+QuickTime movie like this:</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video src="video.mov" /&gt;</code></p>
+<p>So far there has been much debate about which video formats
+(codecs) should be supported by the video element; at the time
+of writing, the search continues for a codec that requires no
+special licensing terms, though WebM</p>
+<p>(<a href="http://www.webmproject.org/">http://www.webmproject.org/</a>) is currently looking like the
+favorite. For the time being, quoting multiple sources gets
+around the problem and avoids the need for browser
+sniffing; there are currently three widely supported video
+formats—MP4, WebM, and Ogg.</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>video&nbsp;id</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>vid1</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;width</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>400</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;height</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>300</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;controls</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>controls</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>source&nbsp;src</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>movie.mp4</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;type</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>video/mp4</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>source&nbsp;src</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>movie.ogg</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;type</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>video/ogg</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>source&nbsp;src</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>movie.webm</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;type</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>video/webm</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>p</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span><span>Video&nbsp;tag&nbsp;not&nbsp;supported</span><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span>p</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span>video</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div></pre>
+<p>It is also a good practice to include width and height attributes
+for the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> element. If height and width are not set, the
+browser doesn’t know how much screen space to reserve,
+resulting in the page layout changing as the video loads.</p>
+<p>You are also recommended to place some suitable text between the
+<code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> and <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;/video&gt;</code> tags to display in browsers that don’t
+support the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> tag.</p>
+<p>Some important properties of the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> tag are listed in
+Table 11.2.</p>
+<p><img alt="11fig02.jpg" src="C:\Users\mcerr\Documents\GitHub\sfadmin-training-javascript11\11fig02.jpg">
+TABLE 11.2 Some Attributes of the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> Element</p>
+<p>Note that the appearance of the controls added using the controls
+property will depend on the browser in use, as shown in Figure
+11.1.</p>
+<p><img alt="11fig01.jpg" src="C:\Users\mcerr\Documents\GitHub\sfadmin-training-javascript11\11fig01.jpg">
+FIGURE 11.1 The appearance of controls varies between browsers</p>
+<p>You can access these properties in the same way as any other
+JavaScript or DOM object. For the previous video definition, you
+might use</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;myVideo&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>getElementById</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>vid1</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>volume</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--compound syntax--js"><span>+=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span><span class="syntax--meta syntax--delimiter syntax--decimal syntax--period syntax--js"><span>.</span></span><span>1</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--js"><span>to&nbsp;marginally&nbsp;increase&nbsp;the&nbsp;volume</span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;or</span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>getElementById</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>vid1</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>paused</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--function-call syntax--js"><span class="syntax--entity syntax--name syntax--function syntax--js"><span>alert</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span>message</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+<p>to pass a message to the user indicating that video playback is
+currently paused.</p>
+<h4 id="testing-format-support-with-canplaytype-">Testing Format Support with canPlayType()</h4>
+<p>You can check for support for a particular codec using the
+JavaScript method</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">media.canPlayType(type)</code></p>
+<p>In the preceding example, type is a string containing the media
+type, for example, “video/webm”. This method must return an empty string if
+the browser knows it cannot play the content. The method might also return
+“probably” if the browser is confident it can support the format, or “maybe”
+otherwise.</p>
+<h4 id="controlling-playback">Controlling Playback</h4>
+<p>Playback can also be controlled programmatically using the pause() and play()
+commands, as in the following code snippet:</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;myVideo&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>getElementById</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>vid1</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>play</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;myVideo&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>getElementById</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>vid1</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>pause</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div></pre>
+<h4 id="playing-sound-with-the-audio-tag">Playing Sound with the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;audio&gt;</code> Tag</h4>
+<p>Pretty much everything stated previously about the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> tag applies equally
+well to the <audio> tag. The simple way to use the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;audio&gt;</code> tag is like this:</audio></p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;audio src="song.mp3"&gt;&lt;/audio&gt;</code></p>
+<p>You can add further attributes to achieve more control over playback, such as
+loop and autoplay:</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;audio src="song.mp3" autoplay loop&gt;&lt;/audio&gt;</code></p>
+<h3 id="tip">Tip</h3>
+<blockquote>
+<p>Don’t abuse loop and autoplay, or you may find that many of your site visitors
+ don’t return!</p>
+</blockquote>
+<p>As with the earlier examples for video files, you can include alternative
+formats to help ensure that a user’s browser will find one that it can play, as
+in the following code:</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>audio&nbsp;controls</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>controls</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>source&nbsp;src</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>song.ogg</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;type</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>audio/ogg</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>source&nbsp;src</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>song.mp3</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;type</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>audio/mpeg</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;Your&nbsp;browser&nbsp;does&nbsp;not&nbsp;support&nbsp;the&nbsp;audio&nbsp;element</span><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span class="syntax--keyword syntax--operator syntax--js"><span>/</span></span><span>audio</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&gt;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;</span></span></div></pre>
+<p>MP3, WAV, and Ogg are typically supported file formats for the <audio> element.
+Controlling an audio file in JavaScript uses the same methods as for the
+<code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> tag.</audio></p>
+<p>To add and play an audio file via JavaScript, you can treat it just like any
+other JavaScript or DOM object:</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;soundElement&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>createElement</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--single syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>'</span></span><span>audio</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>'</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--variable syntax--other syntax--object syntax--js"><span>soundElement</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>setAttribute</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--single syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>'</span></span><span>src</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>'</span></span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>'</span></span><span>sound.ogg</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>'</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--variable syntax--other syntax--object syntax--js"><span>soundElement</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>play</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--variable syntax--other syntax--object syntax--js"><span>soundElement</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>pause</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div></pre>
+<p>The <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;audio&gt;</code> and <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;video&gt;</code> tags have many useful properties that you can access
+via JavaScript. Here are a few useful ones, the meaning of which will be
+immediately apparent:</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--variable syntax--other syntax--object syntax--js"><span>mediaElement</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>duration</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--variable syntax--other syntax--object syntax--js"><span>mediaElement</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>currentTime</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--variable syntax--other syntax--object syntax--js"><span>mediaElement</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>playbackRate</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--variable syntax--other syntax--object syntax--js"><span>mediaElement</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>muted</span></span></span></div></pre>
+<p>For example, to move to a point 45 seconds into a song you might use</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">soundElement.currentTime = 45;</code></p>
+<h3 id="tip">Tip</h3>
+<blockquote>
+<p>You can find a comprehensive reference to these tags and their properties and
+methods at
+<a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html">http://www.whatwg.org/specs/web-apps/current-work/multipage/the-video-element.html</a>.</p>
+</blockquote>
+<h4 id="drawing-on-the-page-with-canvas">Drawing on the Page with <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;canvas&gt;</code></h4>
+<p>The new <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;canvas&gt;</code> tag gives you just that: a rectangular space in your page
+where you can draw shapes and graphics, as well as load and display image files
+and control their display via JavaScript. The many practical uses for the
+element include dynamic charts, JavaScript/HTML games, and instructional
+animations.</p>
+<p>Using the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;canvas&gt;</code> tag simply allows you to define a region by setting its
+width and height parameters; everything else related to creating the graphical
+content is done via JavaScript. There is an extensive set of drawing methods
+known as the Canvas 2D API.</p>
+<h3 id="drag-and-drop">Drag and Drop</h3>
+<p>Drag and drop is a part of the HTML5 standard. Just about any element can be
+made draggable.</p>
+<p>To make an element draggable, all that’s required is to set its draggable
+attribute to true:</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;img draggable="true" /&gt;</code></p>
+<p>Dragging something, though, isn’t much use by itself. To employ a draggable
+object to achieve something useful, you’re probably going to want to be able to
+drop it somewhere.</p>
+<p>To define where an object can be dropped, and control the dragging and dropping
+process, you need to write event listeners to detect and control the various
+parts of the drag-and-drop process.</p>
+<p>There are a few different events you can utilize to control your drag and drop:</p>
+<ul>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dragstart</code></li>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">drag</code></li>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dragenter</code></li>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dragleave</code></li>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dragover</code></li>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">drop</code></li>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dragend</code></li>
+</ul>
+<h3 id="tip">Tip</h3>
+<blockquote>
+<p>Not all items can be drop targets—an <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;img&gt;</code>, for example, cannot accept drops.</p>
+</blockquote>
+<p>To control your drag and drop, you need to define a source element (where the
+drag starts), the data payload (what it is you’re dragging), and a drop target
+ (an area to catch the dropped item).</p>
+<p>The <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dataTransfer</code> property contains a piece of data sent in a drag action. The
+value of <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dataTransfer</code> is usually set in the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dragstart</code> event and read/handled
+in the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">drop</code> event.</p>
+<p>Calling <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">setData(format, data)</code> or <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">getData(format, data)</code> will (respectively)
+set or read this piece of data.</p>
+<p>To get the party started, you define a couple of HTML elements on your page.
+The <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;div&gt;</code> element with ID of <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">drop1</code> is the target area for catching the drop,
+and the image with ID of drag1 is to become your <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">draggable</code> item.</p>
+<p>Three important functions are defined in the code. Each of these functions is
+passed the current event to process. Behind the scenes, <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">ev.target</code> changes
+automatically for each type of event, depending on where you are in the
+drag-and-drop process:</p>
+<ul>
+<li>A function named <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">drag(ev)</code> is executed when the drag starts. This function
+sets the value of the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dataTransfer</code> property for the drag to the ID of the
+dragged object:<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--function syntax--js"><span class="syntax--storage syntax--type syntax--function syntax--js"><span>function</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>drag</span></span><span class="syntax--meta syntax--parameters syntax--js"><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--parameter syntax--function syntax--js"><span>ev</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--begin syntax--bracket syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>dataTransfer</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>setData</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>Text</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--meta syntax--delimiter syntax--object syntax--comma syntax--js"><span>,</span></span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>target</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>id</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--end syntax--bracket syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+</li>
+<li>Another function named <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">allowDrop(ev)</code> is executed when the drag passes over
+the intended drop area. All that this function must achieve is to prevent the
+drop area’s default behavior from taking place (as the default behavior prevents
+dropping):<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--function syntax--js"><span class="syntax--storage syntax--type syntax--function syntax--js"><span>function</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>allowDrop</span></span><span class="syntax--meta syntax--parameters syntax--js"><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--parameter syntax--function syntax--js"><span>ev</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--begin syntax--bracket syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>preventDefault</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--end syntax--bracket syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+</li>
+<li>Finally, a function named <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">drop(ev)</code> is executed when the dragged item is
+dropped. In this function, the value of the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dataTransfer</code> property is read to
+determine the ID of the dragged object; then that object is appended as a child
+object to the drop area object. Once again, the default operation needs to be
+prevented from taking place:<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--function syntax--js"><span class="syntax--storage syntax--type syntax--function syntax--js"><span>function</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>drop</span></span><span class="syntax--meta syntax--parameters syntax--js"><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--parameter syntax--function syntax--js"><span>ev</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--begin syntax--bracket syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;data&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>dataTransfer</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>getData</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>Text</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>target</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>appendChild</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>getElementById</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span>data</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>preventDefault</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--end syntax--bracket syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+The loaded page should look something like the one shown in Figure 11.3;
+dragging the small image and dropping it over the white drop area, you should
+see it “dock” into the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;div&gt;</code> element, as shown in the figure.</li>
+</ul>
+<p><img alt="11fig03.jpg" src="C:\Users\mcerr\Documents\GitHub\sfadmin-training-javascript11\11fig03.jpg"></p>
+<p>FIGURE 11.3 HTML5 drag and drop</p>
+<h3 id="local-storage">Local Storage</h3>
+<p>HTML5 pages can store even large amounts of data within the user’s browser,
+without any negative effect on the website’s performance. Web storage is more
+secure and faster than doing this via cookies. Like when using cookies, the data
+is stored in key/value pairs, and a web page can only access the data it has
+itself stored.</p>
+<p>The two new objects for storing data locally in the browser are</p>
+<ul>
+<li>localStorage—Stores data with no expiration date</li>
+<li>sessionStorage—Stores data just for the current session
+If you’re unsure about your browser’s support for local storage, once again you
+can use feature detection:</li>
+</ul>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--keyword syntax--operator syntax--typeof syntax--js"><span>typeof</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--support syntax--class syntax--dom syntax--js"><span>Storage</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>!==</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>undefined</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--spread syntax--js"><span>...</span></span><span>&nbsp;both&nbsp;objects&nbsp;are&nbsp;available&nbsp;</span><span class="syntax--keyword syntax--operator syntax--spread syntax--js"><span>...</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+<p>To store a value you can invoke the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">setItem</code> method, passing to it a key and a
+value:</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">localStorage.setItem("key", "value");</code></p>
+<p>Alternatively, you can use the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">localStorage</code> object like an associative array:</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">localStorage["key"] = "value";</code></p>
+<p>Retrieving the values can use either of these methods too:</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">alert(localStorage.getItem("key"));</code></p>
+<p>or</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">alert(localStorage["key"]);</code></p>
+<h3 id="working-with-local-files">Working with Local Files</h3>
+<p>At last HTML provides a standard way to interact with the user’s local files,
+using HTML5’s File API specification. There are several ways to access external
+files:</p>
+<ul>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">File</code> provides information including name, size, and MIME type, and gives a
+reference to the file handle.</li>
+<li><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">FileList</code> is an array-like sequence of <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">File</code> objects.</li>
+<li>The <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">FileReader</code> interface uses File and <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">FileList</code> to asynchronously read a
+file. You can check on read progress, catch any errors, and find out when a file
+is completely loaded.</li>
+</ul>
+<h4 id="checking-for-browser-support">Checking for Browser Support</h4>
+<p>Once more, you can check whether your browser supports the File API by the usual
+ feature-detection method:</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--control syntax--js"><span>if</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>window</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>File</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--js"><span>&amp;&amp;</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>window</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>FileReader</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--logical syntax--js"><span>&amp;&amp;</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>window</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>FileList</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--comment syntax--line syntax--double-slash syntax--js"><span class="syntax--punctuation syntax--definition syntax--comment syntax--js"><span>//</span></span><span>&nbsp;we're&nbsp;good</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+<p>In this example you’re going to modify the previous drag-and-drop example to
+allow a list of files to be dragged into a web page from the local file system.
+To do so, you’re going to use the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">FileList</code> data structure.</p>
+<p>Take a look at the modified <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">drop(ev)</code> function:</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--function syntax--js"><span class="syntax--storage syntax--type syntax--function syntax--js"><span>function</span></span><span>&nbsp;</span><span class="syntax--entity syntax--name syntax--function syntax--js"><span>drop</span></span><span class="syntax--meta syntax--parameters syntax--js"><span class="syntax--punctuation syntax--definition syntax--parameters syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--parameter syntax--function syntax--js"><span>ev</span></span><span class="syntax--punctuation syntax--definition syntax--parameters syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span>&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--begin syntax--bracket syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;files&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--object syntax--property syntax--js"><span>dataTransfer</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--js"><span>files</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--js"><span>for</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>files</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--js"><span>length</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i</span><span class="syntax--keyword syntax--operator syntax--increment syntax--js"><span>++</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;f&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;files</span><span class="syntax--meta syntax--brace syntax--square syntax--js"><span>[</span></span><span>i</span><span class="syntax--meta syntax--brace syntax--square syntax--js"><span>]</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;pnode&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>createElement</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>p</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;tnode&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--support syntax--variable syntax--dom syntax--js"><span>document</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>createTextNode</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>f</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>name</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>+</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>&nbsp;(</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>+</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>f</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>type</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>+</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>)&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>+</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>f</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>size</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--js"><span>+</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--js"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--js"><span>"</span></span><span>&nbsp;bytes</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--js"><span>"</span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>pnode</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>appendChild</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span>tnode</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--dom syntax--js"><span>target</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>appendChild</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span>pnode</span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>ev</span></span><span class="syntax--meta syntax--method-call syntax--js"><span class="syntax--meta syntax--delimiter syntax--method syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--function syntax--dom syntax--js"><span>preventDefault</span></span><span class="syntax--meta syntax--arguments syntax--js"><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--js"><span>(</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--js"><span>)</span></span></span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--punctuation syntax--definition syntax--function syntax--body syntax--end syntax--bracket syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+<p>Here, the array-like <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">FileList</code> containing information about the dragged files
+is extracted from the <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">dataTransfer</code> object:</p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">var files = ev.dataTransfer.files;</code></p>
+<p>Then, each file is processed in turn by iterating through them individually:</p>
+<pre class="editor-colors lang-JavaScript"><div class="line"><span class="syntax--source syntax--js"><span class="syntax--keyword syntax--control syntax--js"><span>for</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>(</span></span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--decimal syntax--js"><span>0</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i&nbsp;</span><span class="syntax--keyword syntax--operator syntax--comparison syntax--js"><span>&lt;</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--js"><span>files</span></span><span class="syntax--meta syntax--delimiter syntax--property syntax--period syntax--js"><span>.</span></span><span class="syntax--support syntax--variable syntax--property syntax--js"><span>length</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span><span>&nbsp;i</span><span class="syntax--keyword syntax--operator syntax--increment syntax--js"><span>++</span></span><span class="syntax--meta syntax--brace syntax--round syntax--js"><span>)</span></span><span>&nbsp;</span><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>{</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--storage syntax--type syntax--var syntax--js"><span>var</span></span><span>&nbsp;f&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--js"><span>=</span></span><span>&nbsp;files</span><span class="syntax--meta syntax--brace syntax--square syntax--js"><span>[</span></span><span>i</span><span class="syntax--meta syntax--brace syntax--square syntax--js"><span>]</span></span><span class="syntax--punctuation syntax--terminator syntax--statement syntax--js"><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--operator syntax--spread syntax--js"><span>...</span></span><span>statements&nbsp;to&nbsp;</span><span class="syntax--support syntax--variable syntax--js"><span>process</span></span><span>&nbsp;each&nbsp;file&nbsp;</span><span class="syntax--keyword syntax--operator syntax--spread syntax--js"><span>...</span></span></span></div><div class="line"><span class="syntax--source syntax--js"><span class="syntax--meta syntax--brace syntax--curly syntax--js"><span>}</span></span></span></div></pre>
+<p>After creating this file in your editor and loading the resulting page into the
+browser, you should be able to drag files into the drop area from your local
+system, and see filename, MIME type, and size listed, as shown in Figure 11.4.</p>
+<p><img alt="11fig04.jpg" src="C:\Users\mcerr\Documents\GitHub\sfadmin-training-javascript11\11fig04.jpg">
+FIGURE 11.4 Interfacing with local files</p>
+<p>Summary</p>
+<h3 id="summary">Summary</h3>
+<p>HTML5 offers a whole array of new facilities to HTML, enabling the markup
+language to be used as a much better basis for web applications and allowing
+JavaScript to exploit some brand-new APIs.</p>
+<p>In this hour, you had a whistle-stop tour of these new capabilities, including
+some hands-on coding experience using some of these new APIs.</p>
+<h3 id="qa">Q&amp;A</h3>
+<p>Q. What is the best way for me to learn HTML5?</p>
+<p>A. Learn HTML5 by using it. Jump right in and start building pages using HTML5
+features. Use the semantic tags; try video and audio playback; play with drag
+and drop, and the file API; and build animations using <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">&lt;canvas&gt;</code>. When you have
+questions, many Internet-based tutorials, blogs, and code examples are
+available.</p>
+<p>Q. Are there already real live sites using HTML5?</p>
+<p>A. Sure, lots of them. Take a look at <a href="http://html5gallery.com/">http://html5gallery.com/</a> for some
+examples.</p>
+<h3 id="exercises">Exercises</h3>
+<ul>
+<li>Review some of the examples of previous hours, and try to rewrite them using
+some of the new HTML5 interfaces.</li>
+<li>HTML5 is pretty new at the time of writing. Check out the current state of
+browser support for the various aspects of HTML5 at <a href="http://caniuse.com/">http://caniuse.com/</a>
+or <a href="http://html5readiness.com/">http://html5readiness.com/</a>.</li>
+</ul></body>
+</html>

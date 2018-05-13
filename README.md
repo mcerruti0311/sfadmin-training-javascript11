@@ -127,7 +127,7 @@ if(document.getElementById("vid1").paused) {
 to pass a message to the user indicating that video playback is
 currently paused.
 
-Testing Format Support with canPlayType()
+#### Testing Format Support with canPlayType()
 You can check for support for a particular codec using the
 JavaScript method
 
@@ -146,9 +146,9 @@ commands, as in the following code snippet:
 var myVideo = document.getElementById("vid1").play();
 var myVideo = document.getElementById("vid1").pause();
 ```
-#### Playing Sound with the <audio> Tag
-Pretty much everything stated previously about the <video> tag applies equally
-well to the <audio> tag. The simple way to use the <audio> tag is like this:
+#### Playing Sound with the `<audio>` Tag
+Pretty much everything stated previously about the `<video>` tag applies equally
+well to the <audio> tag. The simple way to use the `<audio>` tag is like this:
 
 `<audio src="song.mp3"></audio>`
 
@@ -316,57 +316,121 @@ itself stored.
 
 The two new objects for storing data locally in the browser are
 
-localStorage—Stores data with no expiration date
-sessionStorage—Stores data just for the current session
-If you’re unsure about your browser’s support for local storage, once again you can use feature detection:
+* localStorage—Stores data with no expiration date
+* sessionStorage—Stores data just for the current session
+If you’re unsure about your browser’s support for local storage, once again you
+can use feature detection:
 
+```JavaScript
 if(typeof(Storage)!=="undefined") {
     ... both objects are available ...
 }
+```
 
-To store a value you can invoke the setItem method, passing to it a key and a value:
+To store a value you can invoke the `setItem` method, passing to it a key and a
+value:
 
-localStorage.setItem("key", "value");
+`localStorage.setItem("key", "value");`
 
-Alternatively, you can use the localStorage object like an associative array:
+Alternatively, you can use the `localStorage` object like an associative array:
 
-localStorage["key"] = "value";
+`localStorage["key"] = "value";`
 
 Retrieving the values can use either of these methods too:
 
-alert(localStorage.getItem("key"));
+`alert(localStorage.getItem("key"));`
 
 or
 
-alert(localStorage["key"]);
+`alert(localStorage["key"]);`
 
-Working with Local Files
-At last HTML provides a standard way to interact with the user’s local files, using HTML5’s File API specification. There are several ways to access external files:
+### Working with Local Files
+At last HTML provides a standard way to interact with the user’s local files,
+using HTML5’s File API specification. There are several ways to access external
+files:
 
-File provides information including name, size, and MIME type, and gives a reference to the file handle.
-FileList is an array-like sequence of File objects.
-The FileReader interface uses File and FileList to asynchronously read a file. You can check on read progress, catch any errors, and find out when a file is completely loaded.
-Checking for Browser Support
-Once more, you can check whether your browser supports the File API by the usual feature-detection method:
+* `File` provides information including name, size, and MIME type, and gives a
+reference to the file handle.
+* `FileList` is an array-like sequence of `File` objects.
+* The `FileReader` interface uses File and `FileList` to asynchronously read a
+file. You can check on read progress, catch any errors, and find out when a file
+is completely loaded.
 
+#### Checking for Browser Support
+Once more, you can check whether your browser supports the File API by the usual
+ feature-detection method:
+```JavaScript
 if (window.File && window.FileReader && window.FileList) {
     // we're good
 }
+```
+In this example you’re going to modify the previous drag-and-drop example to
+allow a list of files to be dragged into a web page from the local file system.
+To do so, you’re going to use the `FileList` data structure.
+
+Take a look at the modified `drop(ev)` function:
+
+```JavaScript
+function drop(ev) {
+            var files = ev.dataTransfer.files;
+            for (var i = 0; i < files.length; i++) {
+                var f = files[i];
+                var pnode = document.createElement("p");
+                var tnode = document.createTextNode(f.name + " (" + f.type + ") " + f.size + " bytes");
+                pnode.appendChild(tnode);
+                ev.target.appendChild(pnode);
+            }
+            ev.preventDefault();
+        }
+```
+
+Here, the array-like `FileList` containing information about the dragged files
+is extracted from the `dataTransfer` object:
+
+`var files = ev.dataTransfer.files;`
+
+Then, each file is processed in turn by iterating through them individually:
+
+```JavaScript
+for (var i = 0; i < files.length; i++) {
+    var f = files[i];
+    ...statements to process each file ...
+}
+```
+After creating this file in your editor and loading the resulting page into the
+browser, you should be able to drag files into the drop area from your local
+system, and see filename, MIME type, and size listed, as shown in Figure 11.4.
+
+![11fig04.jpg](11fig04.jpg)
+FIGURE 11.4 Interfacing with local files
 
 Summary
-HTML5 offers a whole array of new facilities to HTML, enabling the markup language to be used as a much better basis for web applications and allowing JavaScript to exploit some brand-new APIs.
 
-In this hour, you had a whistle-stop tour of these new capabilities, including some hands-on coding experience using some of these new APIs.
+### Summary
+HTML5 offers a whole array of new facilities to HTML, enabling the markup
+language to be used as a much better basis for web applications and allowing
+JavaScript to exploit some brand-new APIs.
 
-Q&A
+In this hour, you had a whistle-stop tour of these new capabilities, including
+some hands-on coding experience using some of these new APIs.
+
+### Q&A
 Q. What is the best way for me to learn HTML5?
 
-A. Learn HTML5 by using it. Jump right in and start building pages using HTML5 features. Use the semantic tags; try video and audio playback; play with drag and drop, and the file API; and build animations using <canvas>. When you have questions, many Internet-based tutorials, blogs, and code examples are available.
+A. Learn HTML5 by using it. Jump right in and start building pages using HTML5
+features. Use the semantic tags; try video and audio playback; play with drag
+and drop, and the file API; and build animations using `<canvas>`. When you have
+questions, many Internet-based tutorials, blogs, and code examples are
+available.
 
 Q. Are there already real live sites using HTML5?
 
-A. Sure, lots of them. Take a look at http://html5gallery.com/ for some examples.
+A. Sure, lots of them. Take a look at http://html5gallery.com/ for some
+examples.
 
-Exercises
-Review some of the examples of previous hours, and try to rewrite them using some of the new HTML5 interfaces.
-HTML5 is pretty new at the time of writing. Check out the current state of browser support for the various aspects of HTML5 at http://caniuse.com/ or http://html5readiness.com/.
+### Exercises
+* Review some of the examples of previous hours, and try to rewrite them using
+some of the new HTML5 interfaces.
+* HTML5 is pretty new at the time of writing. Check out the current state of
+browser support for the various aspects of HTML5 at http://caniuse.com/
+or http://html5readiness.com/.
