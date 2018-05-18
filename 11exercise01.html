@@ -1,11 +1,67 @@
 <html>
 <head>
   <title>Chapter 11 Exercise</title>
+
+  <style>
+  #div1 {
+      width: 350px;
+      height: 70px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+  }
+  </style>
+  <script>
+  function allowDrop(ev) {
+      ev.preventDefault();
+  }
+
+  function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+  }
+  </script>
+
 </head>
 <body>
   <video id="vid1" width="400" height="300" controls="controls">
     <source src="IMG_2942.mov" type="video/mp4" />
     <p>Video tag not supported.</p>
 </video>
+<p>
+<canvas id="myCanvas01" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+</p>
+<p>
+<canvas id="myCanvas02" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+</p>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="drag.gif" draggable="true" ondragstart="drag(event)" width="31" height="32">
+
+<script>
+  var c = document.getElementById("myCanvas02");
+  var ctx = c.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(95,50,40,0,2*Math.PI);
+  ctx.stroke();
+</script>
+
+<script>
+  var c = document.getElementById("myCanvas01");
+  var ctx = c.getContext("2d");
+  ctx.moveTo(0,0);
+  ctx.lineTo(200,100);
+  ctx.stroke();
+</script>
+
 </body>
 </html>
