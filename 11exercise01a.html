@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chapter 11 Exercise</title>
+  <script>
+    var context;
+    var x=200;
+    var y=150;
+    var counter = 0;
+
+    function trafficLight(fillColor) {
+      blackCircle();
+      if(fillColor == 'green'){
+        circleText = 'Go';
+      } else {
+        circleText = 'Stop';
+      }
+
+      context.beginPath();
+      context.fillStyle = fillColor;
+      context.arc(x, y, 50, 0, Math.PI*2, false);
+      context.closePath();
+      context.fill();
+      context.fillStyle = "white"
+      context.textAlign = "center";
+      context.font = "30px Arial"
+      context.fillText(circleText, x,y+10);
+
+      if(fillColor=='green') {
+        document.getElementById("stopButton").style.display = "block";
+        document.getElementById("goButton").style.display = "none";
+      } else {
+        document.getElementById("stopButton").style.display = "none";
+        document.getElementById("goButton").style.display = "block";
+      }
+    }
+
+    function blackCircle() {
+      context.beginPath();
+      context.fillStyle="black";
+      context.arc(x, y, 53, 0, Math.PI*2, false);
+      context.closePath();
+      context.fill();
+    }
+
+    window.onload = function() {
+      context = canvas1.getContext('2d');
+      trafficLight("green");
+    }
+
+  </script>
+
+  </head>
+  <body>
+
+    <p>
+      <canvas
+        id="canvas1"
+        width="400"
+        height="300"
+        style="border:1px solid #d3d3d3;"
+      >
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
+    </p>
+
+    <p>
+      <input
+        type="button"
+        value="Stop"
+        id="stopButton"
+        onclick='trafficLight("red")'
+      />
+      <input
+        type="button"
+        value=" Go "
+        id="goButton"
+        onclick='trafficLight("green")'
+      />
+    </p>
+
+  </body>
+</html>

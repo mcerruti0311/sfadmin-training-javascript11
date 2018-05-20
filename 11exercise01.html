@@ -1,67 +1,80 @@
 <html>
-<head>
-  <title>Chapter 11 Exercise</title>
+  <head>
+    <title>Chapter 11 Exercise</title>
+    <script>
+      var context;
+      var x=200;
+      var y=150;
+      var counter = 0;
+      function greenCircle() {
+        blackCircle();
+        //context.clearRect(0,0, 400,300);
+        context.beginPath();
+        context.fillStyle="green";
+        context.arc(x, y, 50, 0, Math.PI*2, false);
+        context.closePath();
+        context.fill();
+        context.fillStyle = "white"
+        context.textAlign = "center";
+        context.font = "30px Arial"
+        context.fillText("Go", x,y+10);
+        document.getElementById("stopButton").style.display = "block";
+        document.getElementById("goButton").style.display = "none";
+      }
 
-  <style>
-  #div1 {
-      width: 350px;
-      height: 70px;
-      padding: 10px;
-      border: 1px solid #aaaaaa;
-  }
-  </style>
-  <script>
-  function allowDrop(ev) {
-      ev.preventDefault();
-  }
+      function blackCircle() {
+        context.beginPath();
+        context.fillStyle="black";
+        context.arc(x, y, 53, 0, Math.PI*2, false);
+        context.closePath();
+        context.fill();
+      }
 
-  function drag(ev) {
-      ev.dataTransfer.setData("text", ev.target.id);
-  }
+      function redCircle() {
+        blackCircle();
+        context.beginPath();
+        context.fillStyle="red";
+        context.arc(x, y, 50, 0, Math.PI*2, false);
+        context.closePath();
+        context.fill();
+        context.fillStyle="white";
+        context.textAlign = "center";
+        context.font = "30px Arial"
+        context.fillText("Stop", x,y+10);
+        document.getElementById("stopButton").style.display = "none";
+        document.getElementById("goButton").style.display = "block";
+      }
 
-  function drop(ev) {
-      ev.preventDefault();
-      var data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data));
-  }
+      window.onload = function() {
+          context = canvas1.getContext('2d');
+          greenCircle();
+      }
   </script>
-
-</head>
-<body>
-  <video id="vid1" width="400" height="300" controls="controls">
-    <source src="IMG_2942.mov" type="video/mp4" />
-    <p>Video tag not supported.</p>
-</video>
-<p>
-<canvas id="myCanvas01" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
-</p>
-<p>
-<canvas id="myCanvas02" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
-</p>
-
-<p>Drag the W3Schools image into the rectangle:</p>
-
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="drag.gif" draggable="true" ondragstart="drag(event)" width="31" height="32">
-
-<script>
-  var c = document.getElementById("myCanvas02");
-  var ctx = c.getContext("2d");
-  ctx.beginPath();
-  ctx.arc(95,50,40,0,2*Math.PI);
-  ctx.stroke();
-</script>
-
-<script>
-  var c = document.getElementById("myCanvas01");
-  var ctx = c.getContext("2d");
-  ctx.moveTo(0,0);
-  ctx.lineTo(200,100);
-  ctx.stroke();
-</script>
-
-</body>
+  </head>
+  <body>
+    <p>
+      <canvas
+        id="canvas1"
+        width="400"
+        height="300"
+        style="border:1px solid #d3d3d3;"
+      >
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
+    </p>
+    <p>
+      <input
+        type="button"
+        value="Stop"
+        id="stopButton"
+        onclick="redCircle()"
+      />
+      <input
+        type="button"
+        value=" Go "
+        id="goButton"
+        onclick="greenCircle()"
+      />
+    </p>
+  </body>
 </html>
